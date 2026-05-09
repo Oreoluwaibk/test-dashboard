@@ -1,0 +1,273 @@
+@import "tailwindcss";
+:root {
+    --background: #F6F7F8;
+    --foreground: #F6F7F8;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-secondary: #01F0D0;
+    --color-hover: #878f9c;
+    --color-tetiary: #072635;
+    --color-primary: var(--background);
+    --color-btn: #131824;
+    --color-header: #072635;
+    --color-border: #404040;
+    --color-text: #707070;
+    --color-input: #072635;
+    --color-placeHolderText: #49556B;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --background: #F6F7F8;
+        --foreground: #F6F7F8;
+        --font-manrope: 'Manrope', sans-serif;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-manrope) !important;
+}
+
+.header {
+    font: normal normal bold 14px/19px var(--font-manrope);
+    color: var(--color-header);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+p,
+span {
+    font-family: var(--font-manrope) !important;
+}
+
+.sys {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal bold 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.higher {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal normal 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    opacity: 1;
+}
+
+.item {
+    font: normal normal medium 16px/22px Manrope;
+    color: #072635;
+}
+
+.value {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-800) 30px/41px var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal 800 30px/41px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    opacity: 1;
+}
+
+.remark {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal normal 14px/19px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    opacity: 1;
+}
+
+.active {
+    background: var(--color-secondary);
+    top: 34px;
+    left: 601px;
+    width: 122px;
+    height: 41px;
+    /* UI Properties */
+    background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
+    background: #01F0D0 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+    opacity: 1;
+}
+
+.title {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-800) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-33) var(--unnamed-font-family-manrope);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-072635);
+    text-align: left;
+    font: normal normal 800 24px/33px Manrope;
+    letter-spacing: 0px;
+    color: #072635;
+    opacity: 1;
+}
+
+
+/* Container styling */
+
+.diagnostic-container {
+    font-family: var(--font-manrope) !important;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 800px;
+}
+
+h2 {
+    color: #072635;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+
+/* Scrollable wrapper for the table */
+
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+
+/* Table styling */
+
+.diagnostic-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.diagnostic-table thead th {
+    background-color: #F6F7F8;
+    padding: 16px;
+    color: #072635;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+
+/* Rounding the header corners */
+
+.diagnostic-table thead tr th:first-child {
+    border-radius: 24px 0 0 24px;
+}
+
+.diagnostic-table thead tr th:last-child {
+    border-radius: 0 24px 24px 0;
+}
+
+.diagnostic-table td {
+    padding: 20px 16px;
+    border-bottom: 1px solid #F6F7F8;
+    color: #072635;
+    font-size: 14px;
+}
+
+
+/* Custom Scrollbar to match the image */
+
+.table-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #072635;
+    border-radius: 10px;
+}
+
+.diagnostic-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 800px;
+}
+
+.table-title {
+    color: #072635;
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+
+/* Header Styling */
+
+.custom-antd-table .ant-table-thead>tr>th {
+    background-color: #F6F7F8 !important;
+    color: #072635;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+
+/* Creating the pill-shaped header background */
+
+.custom-antd-table .ant-table-thead>tr>th:first-child {
+    border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important;
+}
+
+.custom-antd-table .ant-table-thead>tr>th:last-child {
+    border-top-right-radius: 24px !important;
+    border-bottom-right-radius: 24px !important;
+}
+
+
+/* Body Styling */
+
+.custom-antd-table .ant-table-tbody>tr>td {
+    border-bottom: 1px solid #F6F7F8;
+    padding: 20px 16px;
+    color: #072635;
+}
+
+
+/* Custom Scrollbar for Ant Design Table */
+
+.custom-antd-table .ant-table-body::-webkit-scrollbar {
+    width: 0.2px;
+}
+
+.selected {
+    background: var(--activestate_bg_2) 0% 0% no-repeat padding-box;
+    background: #D8FCF7 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.custom-antd-table .ant-table-body::-webkit-scrollbar-thumb {
+    background: #072635;
+    border-radius: 10px;
+}
