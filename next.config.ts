@@ -5,14 +5,7 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: false,
   },
-
-  // ✅ Disable minification for debugging (so the "j" variable becomes readable)
-  // webpack(config, { dev }) {
-  //   if (!dev) {
-  //     config.optimization.minimize = false;
-  //   }
-  //   return config;
-  // },
+  output: 'export',
  
   images: {
     dangerouslyAllowSVG: true,
