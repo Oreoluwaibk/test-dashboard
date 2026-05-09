@@ -5,8 +5,8 @@ export const getPatientData = async () => {
 
   const response = await axios.get(url, {
     auth: {
-      username: 'coalition',
-      password: 'skills-test'
+      username: process.env.NEXT_PUBLIC_LOGIN_NAME || '',
+      password: process.env.NEXT_PUBLIC_LOGIN_PASSWORD || '',
     }
   });
 
